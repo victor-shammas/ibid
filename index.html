@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ibid: check every citation against your bibliography</title>
+<meta name="description" content="Ibid is a Mac app that checks every citation in your manuscript against its bibliography, and every bibliography entry against the text: missing references, uncited works, wrong years, misspelled authors and pages outside an article’s range. No AI, nothing uploaded.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Ibid">
+<meta property="og:description" content="Check every citation in your manuscript against your bibliography, and every entry against the text. No AI, nothing uploaded.">
+<meta property="og:image" content="https://victorshammas.com/ibid/icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="" width="30" height="30">Ibid</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#catches" class="hide-sm">What it catches</a>
+      <a href="#privacy" class="hide-sm">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <img class="hero-icon" src="icon.png" alt="Ibid app icon" width="96" height="96">
+        <h1>Check every citation against your bibliography.</h1>
+        <p class="lede">Ibid checks each citation in your manuscript against its reference list, and each entry in the list against the text. It catches the missing reference, the work left over from an earlier draft, the wrong year and the misspelled author, before a reviewer or copyeditor does.</p>
+        <div class="cta-row">
+          <!-- At launch, replace with: <a class="btn" href="https://apps.apple.com/app/idPLACEHOLDER">Download on the Mac App Store <small>Free to try</small></a> (see README.md). -->
+          <span class="btn" aria-disabled="true">Coming soon to the Mac App Store <small>Free to try</small></span>
+          <span class="fineprint">For the Mac · macOS 14 or later · No AI, nothing uploaded</span>
+        </div>
+      </div>
+
+      <figure class="compare" role="img" aria-label="Illustration of Ibid comparing a citation with its bibliography entry">
+        <div class="head"><span class="pill bad">▲ Author mismatch</span><span class="count">2 of 21</span></div>
+        <p class="sum">The author’s name is spelled differently in the bibliography.</p>
+        <div class="cols">
+          <div><h4>Citation</h4><p>a new grid of surveillance (<mark>Foucualt</mark> 1977, 195).</p></div>
+          <div><h4>Bibliography</h4><p><mark>Foucault</mark>, Michel. 1977. <em>Discipline and Punish: The Birth of the Prison</em>. New York: Pantheon.</p></div>
+        </div>
+        <p class="src">Suggested fix: “Foucault 1977, 195” · paragraph 5</p>
+        <ul class="list">
+          <li><b class="ok">✓</b> Matched · Scott 1998, 87</li>
+          <li><b class="badc">▲</b> Year mismatch: cited as 1986, listed as 1984 · Bourdieu</li>
+          <li><b class="badc">▲</b> Not in bibliography · Tocqueville 1835, 250</li>
+          <li><b class="warn">●</b> Not cited in text · Durkheim 1897</li>
+        </ul>
+        <p class="demo">From the sample essay that comes with the app</p>
+      </figure>
+    </div>
+  </section>
+
+  <section id="catches">
+    <div class="wrap">
+      <h2>What it catches</h2>
+      <p class="section-lede">Every citation and every bibliography entry gets a verdict, with the reason and, where there is one, a suggested correction.</p>
+      <div class="grid">
+        <div class="card"><h3>Missing references</h3><p>A work cited in the text or footnotes that has no entry in the bibliography.</p></div>
+        <div class="card"><h3>Uncited entries</h3><p>A work in the bibliography that is never cited, perhaps left over from an earlier draft.</p></div>
+        <div class="card"><h3>Wrong year</h3><p>Cited as 1986 when the bibliography says 1984; cited as 1859 for an entry listed as 1989 [1859]; or cited as 1922 when the bibliography has 1922a and 1922b.</p></div>
+        <div class="card"><h3>Wrong author</h3><p>“Foucualt” for “Foucault”, “Zizek” for “Žižek”, a left-out co-author, co-authors in the wrong order, or “et al.” for a work with two authors.</p></div>
+        <div class="card"><h3>Ambiguous and out of range</h3><p>Two works by the same author and year without a/b letters, or page 1425 cited from an article that runs from 1369 to 1401.</p></div>
+        <div class="card"><h3>A tidy reference list</h3><p>Duplicate entries, entries out of alphabetical order and entries without a year.</p></div>
+      </div>
+      <p style="margin-top:22px">It also notices when a citation is set differently from the rest of the manuscript: “(Scott 1998: 87)” among “(Scott 1998, 87)”, or “&amp;” where the others have “and”.</p>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="section-lede">One file to choose, then a list of what needs your attention.</p>
+      <div class="steps">
+        <div class="card"><h3>Choose your manuscript</h3><p>A Word document, PDF, Markdown, LaTeX, RTF, OpenDocument or plain text. Citations in the text and in footnotes and endnotes are all read.</p></div>
+        <div class="card"><h3>Ibid finds the bibliography</h3><p>A References, Bibliography or Works Cited section is read automatically. You can also add BibTeX, CSL-JSON or RIS files from your reference manager.</p></div>
+        <div class="card"><h3>Review and fix</h3><p>Go through what needs attention and copy the suggested citation in one click. Or save a copy of your Word file with a comment on each citation and entry to fix.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reads">
+    <div class="wrap">
+      <h2>Reads manuscripts the way they really are</h2>
+      <div class="grid">
+        <div class="card"><h3>Author–date styles</h3><p>APA, Chicago author-date, ASA and Harvard: parenthetical and narrative citations, several works in one parenthesis, and Pandoc and LaTeX citation keys.</p></div>
+        <div class="card"><h3>Footnotes</h3><p>Chicago notes and bibliography: full notes, short notes and <em>Ibid.</em> are checked against the bibliography, with a short note used before its full note and an unclear <em>Ibid.</em> pointed out.</p></div>
+        <div class="card"><h3>Real reference lists</h3><p>3-em dashes for a repeated author (———. 1990.), original and reprint years, year letters, page ranges and DOIs.</p></div>
+        <div class="card"><h3>PDFs</h3><p>Two-column layouts and footnotes, with problems listed by printed page number. Scanned pages are read with the Mac’s own text recognition, on your Mac.</p></div>
+        <div class="card"><h3>Your reference manager</h3><p>Check against a BibTeX, CSL-JSON (for example from Zotero) or RIS export, or a separate reference-list document.</p></div>
+        <div class="card"><h3>Your drafts</h3><p>Mark a result as reviewed and it stays out of the way next time. Check again after editing to see what’s left.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="privacy">
+    <div class="wrap">
+      <h2>No AI, nothing uploaded</h2>
+      <p class="section-lede">Ibid reads and compares citations on your Mac, by plain rules. The same manuscript always gives the same result, and every verdict says why. The app has no network access at all.</p>
+      <ul class="checks">
+        <li>No AI and no guessing</li>
+        <li>No network connections, ever</li>
+        <li>No account, no sign-in</li>
+        <li>No analytics, tracking or ads</li>
+        <li>Reads only the files you choose</li>
+        <li>Sandboxed, native Mac app</li>
+      </ul>
+      <p style="margin-top:22px"><a href="privacy.html">Read the full privacy policy</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap narrow">
+      <h2>Free to try</h2>
+      <p>Ibid is free to download. The free version checks the whole manuscript and shows full results for the first 25 citations and the first 25 bibliography entries. A one-time purchase unlocks the results for all of them, and the exports. No subscription.</p>
+      <p>The app also comes with a short sample essay, citing Scott, Foucault, Bourdieu and others with a few planted mistakes, so you can see what it does before using it on your own work.</p>
+      <p>Checking quotations rather than citations? <a href="https://victorshammas.com/verbatim/">Verbatim</a> checks every quotation in a manuscript against its source.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap narrow">
+      <h2>Requirements</h2>
+      <ul>
+        <li>A Mac with macOS 14 Sonoma or later.</li>
+        <li>Your manuscript as a Word (.docx or .doc), PDF, Markdown, LaTeX (.tex), RTF, OpenDocument, HTML or plain-text file.</li>
+        <li>A bibliography at the end of the manuscript, or as a BibTeX (.bib), CSL-JSON (.json) or RIS (.ris) file or a separate document.</li>
+      </ul>
+      <p>Questions? See <a href="support.html">Support &amp; FAQ</a>.</p>
+    </div>
+  </section>
+</main>
+
+<section class="app-bar" aria-label="Apps by Victor Shammas">
+  <div class="wrap">
+    <div class="app-bar-head">
+      <p class="app-bar-title"><a href="https://victorshammas.com/apps/">Small, private apps by Victor Shammas</a></p>
+      <p class="app-bar-coffee">Enjoying one of these apps? <a href="https://buymeacoffee.com/victorshammas">Buy me a coffee</a>.</p>
+    </div>
+    <div class="app-tiles">
+      <a class="app-tile" href="https://victorshammas.com/plainview/"><img src="https://victorshammas.com/plainview/icon.png" alt="" width="44" height="44"><span><strong>Plainview</strong><small>A Markdown reader for the Mac</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/gaugeline/"><img src="https://victorshammas.com/gaugeline/icon.png" alt="" width="44" height="44"><span><strong>Gaugeline</strong><small>AI usage limits in your menu bar</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/quoth/"><img src="https://victorshammas.com/quoth/icon.png" alt="" width="44" height="44"><span><strong>Quoth</strong><small>Local voice transcription</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/staple/"><img src="https://victorshammas.com/staple/icon.png" alt="" width="44" height="44"><span><strong>Staple</strong><small>Substack, stapled together</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/claude-usage-meter/"><img src="https://victorshammas.com/claude-usage-meter/icon.png" alt="" width="44" height="44"><span><strong>Claude Usage Meter</strong><small>Claude limits, free and open source</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/lectern/"><img src="https://victorshammas.com/lectern/icon.png" alt="" width="44" height="44"><span><strong>Lectern</strong><small>A presenter view for HTML slides</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/commonplace/"><img src="https://victorshammas.com/commonplace/icon.png" alt="" width="44" height="44"><span><strong>Commonplace</strong><small>Save links to Apple Notes</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/verbatim/"><img src="https://victorshammas.com/verbatim/icon.png" alt="" width="44" height="44"><span><strong>Verbatim</strong><small>Check quotations against sources</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/plainread/"><img src="https://victorshammas.com/plainread/icon.png" alt="" width="44" height="44"><span><strong>Plainread</strong><small>An EPUB reader for the Mac</small></span></a>
+      <a class="app-tile current" aria-current="page" href="https://victorshammas.com/ibid/"><img src="https://victorshammas.com/ibid/icon.png" alt="" width="44" height="44"><span><strong>Ibid</strong><small>Check citations against the bibliography</small><em>You’re here</em></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="mailto:contact+ibid@victorshammas.com">Contact</a><a href="https://buymeacoffee.com/victorshammas">Buy me a coffee</a></nav>
+    <p>Ibid is an independent app. Mac and Mac App Store are trademarks of Apple Inc. Microsoft Word is a trademark of Microsoft Corporation. Zotero is a trademark of the Corporation for Digital Scholarship. None of them is affiliated with or endorses Ibid.</p>
+    <p>© 2026 Victor Shammas</p>
+  </div>
+</footer>
+</body>
+</html>

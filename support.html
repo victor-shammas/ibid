@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ibid Support</title>
+<meta name="description" content="Help with Ibid: choosing a manuscript and bibliography, what the verdicts mean, citation styles, PDFs and scanned pages, Word comments and the free version.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="" width="30" height="30">Ibid</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./" class="hide-sm">Home</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap narrow">
+    <h1>Support</h1>
+    <p>Something not working, or a result you don’t understand? The answers below cover most things. If not, email <a href="mailto:contact+ibid@victorshammas.com?subject=Ibid%20support">contact+ibid@victorshammas.com</a>. I read every message.</p>
+    <ul class="toc">
+      <li><a href="#start">Getting started</a></li>
+      <li><a href="#verdicts">What the verdicts mean</a></li>
+      <li><a href="#citations">Citations and styles</a></li>
+      <li><a href="#bibliography">The bibliography</a></li>
+      <li><a href="#pdf">PDFs and scanned pages</a></li>
+      <li><a href="#fixing">Fixing citations</a></li>
+      <li><a href="#free">The free version</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <h2 id="start">Getting started</h2>
+    <details open>
+      <summary>How do I check a manuscript?</summary>
+      <p>Open Ibid, choose your manuscript (or drag it onto the window) and click <em>Check Citations</em>. If the manuscript ends with a References, Bibliography or Works Cited section, that’s all: Ibid reads it automatically. You can also add BibTeX, CSL-JSON or RIS files to check against.</p>
+      <p>To see what it does first, choose <em>Help › Try the Sample</em>: a short essay citing Scott, Foucault, Bourdieu and others, with a few planted mistakes.</p>
+    </details>
+    <details>
+      <summary>Which files can I use?</summary>
+      <p><strong>Manuscript:</strong> Word (.docx), PDF, Markdown, LaTeX (.tex), RTF, OpenDocument (.odt), Word 97–2003 (.doc), HTML or plain text. Footnotes and endnotes are read too.</p>
+      <p><strong>Bibliography:</strong> the manuscript’s own reference list, and optionally BibTeX (.bib), CSL-JSON (.json, for example exported from Zotero) or RIS (.ris) files, or a separate reference-list document (Word, PDF, Markdown or text).</p>
+    </details>
+    <details>
+      <summary>It found no bibliography.</summary>
+      <p>Ibid looks for a heading such as “References”, “Bibliography” or “Works Cited” near the end of the manuscript, and reads the entries after it. If your list has a different heading, or is in a separate file, add that file as a bibliography file instead.</p>
+    </details>
+    <details>
+      <summary>Does Ibid read tracked changes?</summary>
+      <p>In Word files, tracked deletions are skipped, so a citation you deleted with Track Changes on isn’t checked. Tracked insertions are read as part of the text.</p>
+    </details>
+
+    <h2 id="verdicts">What the verdicts mean</h2>
+    <ul class="verdicts">
+      <li><strong>Matched.</strong> The citation and its bibliography entry agree on author and year.</li>
+      <li><strong>Not in bibliography.</strong> The citation names a work that has no entry in the bibliography.</li>
+      <li><strong>Not cited in text.</strong> A bibliography entry that no citation in the text or notes refers to.</li>
+      <li><strong>Year mismatch.</strong> The author matches, the year doesn’t: a different year, an original year cited for an entry listed by its reprint year, or a year without the a/b letter the bibliography uses.</li>
+      <li><strong>Author mismatch.</strong> The year matches, the name doesn’t quite: a misspelling, a missing accent, a left-out co-author, co-authors in the wrong order, or “et al.” for two authors.</li>
+      <li><strong>Ambiguous citation.</strong> Two entries have the same author and year, without a/b letters to tell them apart.</li>
+      <li><strong>Page outside range.</strong> The cited page isn’t within the page range of the article or chapter in the bibliography.</li>
+      <li><strong>Reference issue.</strong> A duplicate entry, an entry out of alphabetical order, or an entry without a year.</li>
+      <li><strong>Style inconsistency.</strong> The citation is set differently from most of the others in the manuscript, for example a colon before the page number, or “&amp;” instead of “and”.</li>
+    </ul>
+    <p>For footnoted manuscripts there are also <strong>Title mismatch</strong>, <strong>Short note before full note</strong> and <strong>Unclear “Ibid.”</strong> (it isn’t clear which work an <em>Ibid.</em> refers to).</p>
+    <details>
+      <summary>A citation is reported missing, but it’s in the bibliography.</summary>
+      <p>First check the spelling of the name and the year in both places; Ibid suggests the closest entry when there is one. If you cite an organisation by a short name, give that name in brackets in the bibliography entry, for example <code>Space Exploration Technologies Corp. [SpaceX]. 2020.</code>, and citations to “SpaceX” will match it. Abbreviations made from an organisation’s initials, such as WHO or NASA, are matched without brackets.</p>
+    </details>
+    <details>
+      <summary>Can I turn off the style and alphabetical-order checks?</summary>
+      <p>Yes, in <em>Ibid › Settings</em>.</p>
+    </details>
+
+    <h2 id="citations">Citations and styles</h2>
+    <details open>
+      <summary>Which citation styles does Ibid check?</summary>
+      <p>Author–date styles, such as APA, Chicago author-date, ASA and Harvard, and Chicago notes and bibliography. It understands citations like <code>(Scott 1998, 87)</code>, <code>(Scott 1998: 87–89)</code>, <code>Scott (1998)</code>, <code>(Scott 1998; Bourdieu 1984)</code>, <code>(Weber 1922a, 1922b)</code>, Pandoc keys like <code>[@scott1998, 87]</code> and LaTeX <code>\cite{scott1998}</code>.</p>
+      <p>In footnotes, full notes like <code>James C. Scott, Seeing Like a State (New Haven: Yale University Press, 1998), 87.</code>, short notes like <code>Scott, Seeing Like a State, 87.</code>, and <em>Ibid.</em> and <em>Idem</em> are all checked against the bibliography.</p>
+    </details>
+    <details>
+      <summary>What about MLA or numbered citations?</summary>
+      <p>Ibid recognises MLA (author–page) and numbered citation styles and says so in the results, but doesn’t check them yet. Their bibliography entries are shown, without “Not cited in text” verdicts.</p>
+    </details>
+
+    <h2 id="bibliography">The bibliography</h2>
+    <details>
+      <summary>Do I need a .bib file?</summary>
+      <p>No. If the manuscript has its own reference list, Ibid reads it, including 3-em dashes for a repeated author (<code>———. 1990.</code>), original and reprint years like <code>1989 [1859]</code>, year letters, page ranges and DOIs. Add an export from your reference manager only if you also want to check against it.</p>
+    </details>
+    <details id="access">
+      <summary>Ibid says it isn’t allowed to read a file.</summary>
+      <p>Ibid can read only the files you choose (a Mac App Store rule). A link or alias to a file elsewhere isn’t covered: choose the original file instead.</p>
+    </details>
+
+    <h2 id="pdf">PDFs and scanned pages</h2>
+    <details>
+      <summary>Can I check a PDF?</summary>
+      <p>Yes. Ibid reads the page layout, including two-column pages and footnotes, and lists problems by the printed page number. Results are most reliable from a PDF exported with its text (for example with <em>Save as PDF</em> in Word), rather than a scan. If you have the Word or LaTeX file, checking that is better still.</p>
+    </details>
+    <details>
+      <summary>What about scanned PDFs?</summary>
+      <p>Pages without text are read with the Mac’s built-in text recognition, on your Mac. It sometimes misreads a letter, so a name on a scanned page may be reported as a mismatch when it’s right. Check the page itself before changing anything.</p>
+    </details>
+
+    <h2 id="fixing">Fixing citations</h2>
+    <details>
+      <summary>What’s the fastest way to fix everything?</summary>
+      <p>Go through <em>To Review</em> with the arrow keys. <em>Copy Suggested Fix or Reference</em> (<kbd>⇧⌘C</kbd>) copies the corrected citation. For a Word manuscript, <em>File › Export Word Copy with Comments</em> saves a copy of your document with a margin comment on each citation and bibliography entry to fix. Then fix them in Word and choose <em>Check Again</em> (<kbd>⌘R</kbd>).</p>
+      <p>For any manuscript, <em>File › Export Report as Web Page</em> saves a report you can open in any browser.</p>
+    </details>
+    <details>
+      <summary>A result is fine as it is.</summary>
+      <p>Mark it as reviewed with <kbd>⌘K</kbd> and it stays out of the list, also next time you check the same manuscript.</p>
+    </details>
+    <details>
+      <summary>Does Ibid change my manuscript?</summary>
+      <p>No. It only reads it. The Word copy with comments is a new file; your original isn’t touched.</p>
+    </details>
+
+    <h2 id="free">The free version</h2>
+    <details>
+      <summary>What does the free version do?</summary>
+      <p>It checks the whole manuscript, and shows full results for the first 25 citations and the first 25 bibliography entries. A one-time in-app purchase unlocks the results for all of them, and the exports. There’s no subscription.</p>
+    </details>
+    <details>
+      <summary>I bought Ibid on another Mac.</summary>
+      <p>Choose <em>Ibid › Settings › Restore Purchase</em>, signed in with the same Apple Account.</p>
+    </details>
+
+    <h2 id="contact">Contact</h2>
+    <p>Email <a href="mailto:contact+ibid@victorshammas.com?subject=Ibid%20support">contact+ibid@victorshammas.com</a>. If a result looks wrong, it helps to include the citation and the bibliography entry as they appear in your manuscript.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="mailto:contact+ibid@victorshammas.com">Contact</a></nav>
+    <p>© 2026 Victor Shammas</p>
+  </div>
+</footer>
+</body>
+</html>
