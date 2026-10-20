@@ -45,7 +45,7 @@
     </details>
     <details>
       <summary>Which files can I use?</summary>
-      <p><strong>Manuscript:</strong> Word (.docx), PDF, Markdown, LaTeX (.tex), RTF, OpenDocument (.odt), Word 97–2003 (.doc), HTML or plain text. Footnotes and endnotes are read too.</p>
+      <p><strong>Manuscript:</strong> Word (.docx), PDF, Markdown, LaTeX (.tex), RTF, OpenDocument (.odt), Word 97–2003 (.doc), HTML, EPUB or plain text. Footnotes and endnotes are read too.</p>
       <p><strong>Bibliography:</strong> the manuscript’s own reference list, and optionally BibTeX (.bib), CSL-JSON (.json, for example exported from Zotero) or RIS (.ris) files, or a separate reference-list document (Word, PDF, Markdown or text).</p>
     </details>
     <details>
@@ -69,7 +69,7 @@
       <li><strong>Reference issue.</strong> A duplicate entry, an entry out of alphabetical order, or an entry without a year.</li>
       <li><strong>Style inconsistency.</strong> The citation is set differently from most of the others in the manuscript, for example a colon before the page number, or “&amp;” instead of “and”.</li>
     </ul>
-    <p>For footnoted manuscripts there are also <strong>Title mismatch</strong>, <strong>Short note before full note</strong> and <strong>Unclear “Ibid.”</strong> (it isn’t clear which work an <em>Ibid.</em> refers to).</p>
+    <p>For footnoted manuscripts there are also <strong>Title mismatch</strong>, <strong>Short note before full note</strong>, <strong>Unclear “Ibid.”</strong> (it isn’t clear which work an <em>Ibid.</em> refers to) and <strong>Wrong note reference</strong> (a note such as <code>Hilton (n 9)</code> or <code>Hilton, supra note 9</code> points to a note that comes later, doesn’t exist, or doesn’t cite Hilton; Ibid suggests the note that does).</p>
     <details>
       <summary>A citation is reported missing, but it’s in the bibliography.</summary>
       <p>First check the spelling of the name and the year in both places; Ibid suggests the closest entry when there is one. If you cite an organisation by a short name, give that name in brackets in the bibliography entry, for example <code>Space Exploration Technologies Corp. [SpaceX]. 2020.</code>, and citations to “SpaceX” will match it. Abbreviations made from an organisation’s initials, such as WHO or NASA, are matched without brackets.</p>
@@ -82,8 +82,12 @@
     <h2 id="citations">Citations and styles</h2>
     <details open>
       <summary>Which citation styles does Ibid check?</summary>
-      <p>Author–date styles, such as APA, Chicago author-date, ASA and Harvard, and Chicago notes and bibliography. It understands citations like <code>(Scott 1998, 87)</code>, <code>(Scott 1998: 87–89)</code>, <code>Scott (1998)</code>, <code>(Scott 1998; Bourdieu 1984)</code>, <code>(Weber 1922a, 1922b)</code>, Pandoc keys like <code>[@scott1998, 87]</code> and LaTeX <code>\cite{scott1998}</code>.</p>
-      <p>In footnotes, full notes like <code>James C. Scott, Seeing Like a State (New Haven: Yale University Press, 1998), 87.</code>, short notes like <code>Scott, Seeing Like a State, 87.</code>, and <em>Ibid.</em> and <em>Idem</em> are all checked against the bibliography.</p>
+      <p>Author–date styles, such as APA, Chicago author-date, ASA, Harvard and author–date citations with Vancouver reference lists, and notes styles: Chicago notes and bibliography, OSCOLA and Bluebook. It understands citations like <code>(Scott 1998, 87)</code>, <code>(Scott 1998: 87–89)</code>, <code>Scott (1998)</code>, <code>(Scott 1998; Bourdieu 1984)</code>, <code>(Weber 1922a, 1922b)</code>, Pandoc keys like <code>[@scott1998, 87]</code> and LaTeX <code>\cite{scott1998}</code>.</p>
+      <p>In footnotes, full notes like <code>James C. Scott, Seeing Like a State (New Haven: Yale University Press, 1998), 87.</code>, short notes like <code>Scott, Seeing Like a State, 87.</code>, and <em>Ibid.</em> and <em>Idem</em> are all checked against the bibliography. Notes that point back to an earlier note, <code>Hilton, op. cit. (note 9), 241</code>, <code>Hilton (n 9) 241</code> or <code>Hilton, supra note 9, at 241</code>, are checked against the note they name.</p>
+    </details>
+    <details>
+      <summary>My manuscript has footnotes but no bibliography.</summary>
+      <p>That’s common in history and law. Ibid then checks the notes against one another: each <em>Ibid.</em> against the note before it, each short note against an earlier full note, and each “(n 9)” or “supra note 9” against note 9. Statutes, cases and archival sources are read as citations but have nothing to be checked against.</p>
     </details>
     <details>
       <summary>What about MLA or numbered citations?</summary>
@@ -93,7 +97,7 @@
     <h2 id="bibliography">The bibliography</h2>
     <details>
       <summary>Do I need a .bib file?</summary>
-      <p>No. If the manuscript has its own reference list, Ibid reads it, including 3-em dashes for a repeated author (<code>———. 1990.</code>), original and reprint years like <code>1989 [1859]</code>, year letters, page ranges and DOIs. Add an export from your reference manager only if you also want to check against it.</p>
+      <p>No. If the manuscript has its own reference list, Ibid reads it, including 3-em dashes for a repeated author (<code>———. 1990.</code>), original and reprint years like <code>1989 [1859]</code>, year letters, page ranges and DOIs. Add an export from your reference manager only if you also want to check against it. A library usually holds more works than one manuscript cites, so its unused entries are counted rather than listed as not cited, and a work that is both in the library and in the manuscript’s list counts once.</p>
     </details>
     <details id="access">
       <summary>Ibid says it isn’t allowed to read a file.</summary>
@@ -128,7 +132,7 @@
     <h2 id="free">The free version</h2>
     <details>
       <summary>What does the free version do?</summary>
-      <p>It checks the whole manuscript, and shows full results for the first 25 citations and the first 25 bibliography entries. A one-time in-app purchase unlocks the results for all of them, and the exports. There’s no subscription.</p>
+      <p>It checks the whole manuscript, and shows every citation and entry that matches, and the first 10 items to review, in full. A one-time in-app purchase unlocks every item to review, and the exports. There’s no subscription.</p>
     </details>
     <details>
       <summary>I bought Ibid on another Mac.</summary>
